@@ -276,6 +276,35 @@
             // Koden loppar igenom alla objekten och vid varje animal så skriver den ut i detta fallet animal typen och animal stats då vi har både dem metoderna kallade på
             // animal typen igenom metoden GetType "{animal.GetType().Name}" och Stats igenom metoden "{animal.Stats()}". Där Stats är en metod i Animal som overridas i varje subklass
             // också varje subklass lägger till denns special properties i en return som sedan skrivs ut i våran Console.WriteLine när vi kallar på metoden.
+
+            Console.WriteLine();
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------");
+            Console.WriteLine();
+
+            // 14. Skriv ut Stats() metoden enbart för alla hundar genom en foreach på
+            //Animals.
+            // Vill jag få med Wolf och WolfMan så behöver jag göra dem till Dog Object
+            foreach ( var animal in anmialList)
+            {
+                if (animal is Dog || animal.GetType().IsSubclassOf(typeof(Dog)))
+                {
+                    Console.WriteLine($"Animal type: {animal.GetType().Name}, Stats: {animal.Stats()}\n");
+                }
+            }
+            // Vill jag få med Wolf och WolfMan så behöver jag göra dem till Dog Object eller dra in dem med att kolla om det är dem respektive så här:
+            // Där jag både kollar om det är Dog och om det är Wolf eller WolfMan
+            Console.WriteLine("Check if its either Dog, Wolf, or WolfMan");
+            foreach (var animal in anmialList)
+            {
+                if (animal is Dog || animal.GetType().IsSubclassOf(typeof(Dog)))
+                {
+                    Console.WriteLine($"Animal type: {animal.GetType().Name}, Stats: {animal.Stats()}\n");
+                }
+                else if (animal is Wolf || animal is WolfMan)
+                {
+                    Console.WriteLine($"Animal type: {animal.GetType().Name}, Stats: {animal.Stats()}\n");
+                }
+            }
         }
     }
 }
