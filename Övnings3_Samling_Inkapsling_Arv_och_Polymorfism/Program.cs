@@ -305,6 +305,9 @@
                     Console.WriteLine($"Animal type: {animal.GetType().Name}, Stats: {animal.Stats()}\n");
                 }
             }
+
+            // Vi är på 3.4) Mer polymorfism: 15. Skapa en ny metod med valfritt namn i klassen Dog som endast returnerar en valfri
+            // sträng.
         }
     }
 }
