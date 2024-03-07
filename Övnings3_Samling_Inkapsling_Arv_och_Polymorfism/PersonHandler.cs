@@ -32,5 +32,19 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
 
             return bmi;
         }
+
+
+        public static bool CheckIfUserIsAlowedToGoToANightClub(Person person)
+        {
+            int age = person.Age;
+            if (age > 21)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
