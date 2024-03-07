@@ -174,6 +174,7 @@
 
             //-----------------------------------------------------------------------------------
 
+            // Min djur lista
             List<Animal> anmialList = new List<Animal>();
             //Animal Horse = new Horse("Benkt", 33, 45.0, 4, "Rainbow");
             // Horse
@@ -229,16 +230,33 @@
 
             foreach ( var animal in anmialList)
             {
-                if(animal.GetType().Name != myWolfMan.GetType().Name)
+
+                if(animal is IPerson)
                 {
-                    Console.WriteLine($"{animal.GetType().Name} {animal.Name}: {animal.DoSound()}");
+                    if(animal.GetType().Name == myWolfMan.GetType().Name)
+                    {
+                        myWolfMan.Talk();
+                    }
+
                 }
                 else
                 {
-                    myWolfMan.Talk();
+                    Console.WriteLine($"{animal.GetType().Name} {animal.Name}: {animal.DoSound()}");
                 }
+
+
+                //if(animal.GetType().Name != myWolfMan.GetType().Name)
+                //{
+                //    Console.WriteLine($"{animal.GetType().Name} {animal.Name}: {animal.DoSound()}");
+                //}
+                //else
+                //{
+                //    myWolfMan.Talk();
+                //}
                 
             }
+
+            //------------------------List of dogs----------------------------------------------------------------------
 
         }
     }

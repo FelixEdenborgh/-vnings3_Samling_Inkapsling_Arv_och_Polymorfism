@@ -79,6 +79,12 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
             weight = weightOfAnimal;
             numberoflegs = numberOfLegsForTheAnimal;
         }
+
+
+        public virtual string Stats()
+        {
+            return $"Name: {name}, Age: {Age}, Weight: {Weight}, Number of Legs: {numberoflegs}";
+        }
     }
 
     // Hästens unika egenskap är att ha olika mönster
@@ -99,6 +105,11 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
         public override string DoSound()
         {
             return "gnäääg gnäggg";
+        }
+
+        public override string Stats()
+        {
+            return base.Stats() + $", Pattern: {Pattern}";
         }
     }
 
@@ -121,6 +132,11 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
         public override string DoSound()
         {
             return "woof";
+        }
+
+        public override string Stats()
+        {
+            return base.Stats() + $", Breed: {Breed}";
         }
     }
 
@@ -152,6 +168,11 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
         {
             return "Squeak squeak";
         }
+
+        public override string Stats()
+        {
+            return base.Stats() + $", Spiky: {GetPointy}";
+        }
     }
 
     // Maskens unika egenskap är att kunna gräva sig ner.
@@ -170,6 +191,11 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
         public override string DoSound()
         {
             return "Scape, gnissle, rassle";
+        }
+
+        public override string Stats()
+        {
+            return base.Stats() + $", How deep to dig: {HowDeep} Meters";
         }
     }
 
@@ -191,6 +217,11 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
         {
             return "Kvitter Kvitter";
         }
+
+        public override string Stats()
+        {
+            return base.Stats() + $", Feather Color: {FeatherColor}";
+        }
     }
 
     // Vargens unika egenskap är att bytta färg på pälsen.
@@ -210,6 +241,11 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
         public override string DoSound()
         {
             return "aaaaaahhhhhooooooooooooooooooooooooooooooooooooooooo";
+        }
+
+        public override string Stats()
+        {
+            return base.Stats() + $", Fur Color: {FurColor}";
         }
     }
 
@@ -231,6 +267,11 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
         {
             return "Squuueeekk";
         }
+
+        public override string Stats()
+        {
+            return base.Stats() + $", Height of the Pelican: {Lenght} Centimeter";
+        }
     }
 
     // Flamingos unika egenskap är att bytta färg på sig
@@ -251,6 +292,11 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
         {
             return "Flof Flof";
         }
+
+        public override string Stats()
+        {
+            return base.Stats() + $", Flamingos: Ability to change color: {ChangeColor}";
+        }
     }
 
     // Swans ability is to fly high
@@ -270,6 +316,11 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
         public override string DoSound()
         {
             return "Sqwosh";
+        }
+
+        public override string Stats()
+        {
+            return base.Stats() + $", Swans: Ability to fly how high: {HowHigh} meters";
         }
     }
 
