@@ -222,10 +222,22 @@
             Swan mySwan = new Swan("Alex", 18, 1.2, 2, "White", 20);
             Console.WriteLine($"My Swan {mySwan.Name} can fly really high! right now its flying {mySwan.HowHigh} meters up in the air!");
             anmialList.Add(mySwan);
+            //WolfMan
+            WolfMan myWolfMan = new WolfMan("Jimmy", 33, 110, 2, "Black");
+            Console.WriteLine($"My friend are pretty scary, he hunts in the wild forest and says that he gets alot of victims\nhe say that he is a {myWolfMan.GetType().Name}\n");
+            anmialList.Add(myWolfMan);
 
             foreach ( var animal in anmialList)
             {
-                Console.WriteLine($"{animal.GetType().Name} {animal.Name}: {animal.DoSound()}");
+                if(animal.GetType().Name != myWolfMan.GetType().Name)
+                {
+                    Console.WriteLine($"{animal.GetType().Name} {animal.Name}: {animal.DoSound()}");
+                }
+                else
+                {
+                    myWolfMan.Talk();
+                }
+                
             }
 
         }

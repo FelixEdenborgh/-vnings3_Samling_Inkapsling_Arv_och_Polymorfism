@@ -272,4 +272,30 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
             return "Sqwosh";
         }
     }
+
+
+    //WolfMan
+    public class WolfMan : Wolf, IPerson
+    {
+        public WolfMan(string nameOfAnimal, int ageOfAnimal, double weightOfAnimal, int numberOfLegsForTheAnimal, string furColor) : base(nameOfAnimal, ageOfAnimal, weightOfAnimal, numberOfLegsForTheAnimal, furColor)
+        {
+        }
+
+        public void Talk()
+        {
+            Console.WriteLine("Im A half Wolf half Man, And I like to Eat unlucky people that goes out in the Wilderness and comes accross me!");
+        }
+    }
+
+
+    //13. F: Om vi under utvecklingen kommer fram till att samtliga fåglar behöver ett nytt
+    //attribut, i vilken klass bör vi lägga det?
+    // Svar: Vi lägger det i Bird då alla andra fåglarna ärver av Bird.
+
+    //14. F: Om alla djur behöver det nya attributet, vart skulle man lägga det då?
+    //Svar: Då lägger vi det i Animal då alla ärver av Animal.
+
+
+
+
 }
