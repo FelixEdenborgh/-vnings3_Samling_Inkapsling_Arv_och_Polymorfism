@@ -135,6 +135,7 @@
             //    Console.WriteLine(ex.Message);
             //}
 
+            //-----------------------------------------------------------
             try
             {
                 List<UserError> errors = new List<UserError>();
@@ -144,6 +145,26 @@
                 foreach (var error in errors)
                 {
                     Console.WriteLine(error.UEMessage());
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            //----------------------------------------------------------
+            Console.WriteLine();
+            try
+            {
+                List<UserError> userErrors = new List<UserError>();
+                userErrors.Add(new NumericInputError());
+                userErrors.Add(new TextInputError());
+                userErrors.Add(new SymbolInputError());
+                userErrors.Add(new OldGrandPaInputError());
+                userErrors.Add(new ThinkingInputError());
+
+                foreach(var uerror in userErrors)
+                {
+                    Console.WriteLine($"{uerror.UEMessage()}\n");
                 }
             }
             catch (ArgumentException ex)
