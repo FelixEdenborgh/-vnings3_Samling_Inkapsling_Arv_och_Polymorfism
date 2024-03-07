@@ -172,7 +172,61 @@
                 Console.WriteLine(ex.Message);
             }
 
+            //-----------------------------------------------------------------------------------
 
+            List<Animal> anmialList = new List<Animal>();
+            //Animal Horse = new Horse("Benkt", 33, 45.0, 4, "Rainbow");
+            // Horse
+            Horse myHorse = new Horse("Benkt", 33, 45.0, 4, "Rainbow");
+            myHorse.ChangePatternOnHourse("Sparkly");
+            Console.WriteLine($"My Horse {myHorse.Name} have the pattern {myHorse.Pattern}");
+            anmialList.Add(myHorse);
+            //Dog
+            Dog myDog = new Dog("Sven", 12, 32.0, 4, "Border terier");
+            myDog.ChangeBreedOfDog("Springe spanier");
+            Console.WriteLine($"The dog {myDog.Name} are of the breed {myDog.Breed}");
+            anmialList.Add(myDog);
+            //Hedgehog
+            Hedgehog myhedgehog = new Hedgehog("Kasper", 5, 3.0, 4, true);
+            bool spikyHedgehog = myhedgehog.GetSpicky(true);
+            if (spikyHedgehog == true)
+            {
+                Console.WriteLine($"My Hedgehog {myhedgehog.Name} are now spiky!");
+            }
+            else
+            {
+                Console.WriteLine($"The Hedgehog {myhedgehog.Name} are now not spiky!");
+            }
+            anmialList.Add(myhedgehog);
+            //Worm
+            Worm myWorm = new Worm("Jonas", 1, 0.5, 0, 50);
+            Console.WriteLine($"My worm {myWorm.Name} are: {myWorm.HowDeep} meters into the ground!");
+            anmialList.Add(myWorm);
+            //Bird
+            Bird myBird = new Bird("Oscar", 7, 0.3, 2, "Green");
+            Console.WriteLine($"My bird {myBird.Name} have the lovely {myBird.FeatherColor} feather color");
+            anmialList.Add(myBird);
+            //Wolf
+            Wolf myWolf = new Wolf("Stuart", 9, 60, 4, "Brown");
+            Console.WriteLine($"My wolf named {myWolf.Name} have the most amazing {myWolf.FurColor} fur color");
+            anmialList.Add(myWolf);
+            //Pelican
+            Pelican myPelican = new Pelican("Gustav", 13, 0.9, 2, "White", 190.0);
+            Console.WriteLine($"My Pelican {myPelican.Name} are so lovely its {myPelican.FeatherColor} and are really high to at {myPelican.Lenght}cm!");
+            anmialList.Add(myPelican);
+            //Flamingo
+            Flamingo myFlamingo = new Flamingo("Eric", 24, 0.7, 2, "Pink", "Blue");
+            Console.WriteLine($"My Flamingo with the name {myFlamingo.Name} have the super power to change color! It was Pink before but now its {myFlamingo.ChangeColor}");
+            anmialList.Add(myFlamingo);
+            //Swan
+            Swan mySwan = new Swan("Alex", 18, 1.2, 2, "White", 20);
+            Console.WriteLine($"My Swan {mySwan.Name} can fly really high! right now its flying {mySwan.HowHigh} meters up in the air!");
+            anmialList.Add(mySwan);
+
+            foreach ( var animal in anmialList)
+            {
+                Console.WriteLine($"{animal.GetType().Name} {animal.Name}: {animal.DoSound()}");
+            }
 
         }
     }
