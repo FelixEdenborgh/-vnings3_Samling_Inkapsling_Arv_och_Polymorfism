@@ -22,7 +22,7 @@
 
                 //-------------------------------------------Person 1-------------------------------------------------------------------------
                 Person newP = handler.CreatePerson(15, "kalle", "Svennsson", 150, 75);
-                Console.WriteLine($"{newP.Age}, {newP.FName}, {newP.LName}, {newP.Height}, {newP.Weight}");
+                Console.WriteLine($"År: {newP.Age}, Förnamn: {newP.FName}, Efternamn: {newP.LName}, Längd: {newP.Height}, Vikt{newP.Weight}");
                 double bmi = handler.CheckBMI(newP);
                 if(bmi < 18.5)
                 {
@@ -50,7 +50,7 @@
 
                 //-------------------------------------------Person 2-------------------------------------------------------------------------
                 Person newP1 = handler.CreatePerson(18, "Gustav", "Svennsson", 170, 63);
-                Console.WriteLine($"{newP1.Age}, {newP1.FName}, {newP1.LName}, {newP1.Height}, {newP1.Weight}");
+                Console.WriteLine($"År: {newP1.Age}, Förnamn: {newP1.FName}, Efternamn: {newP1.LName}, Längd: {newP1.Height}, Vikt: {newP1.Weight}");
                 double bmi1 = handler.CheckBMI(newP1);
                 if (bmi1 < 18.5)
                 {
@@ -77,7 +77,7 @@
 
                 //-------------------------------------------Person 3-------------------------------------------------------------------------
                 Person newP2 = handler.CreatePerson(65, "Gösta", "Eriksson", 140, 70);
-                Console.WriteLine($"{newP2.Age}, {newP2.FName}, {newP2.LName}, {newP2.Height}, {newP2.Weight}");
+                Console.WriteLine($"År:  {newP2.Age} , Förnamn:  {newP2.FName} , Efternamn:  {newP2.LName} , Längd: {newP2.Height}, Vikt: {newP2.Weight}");
 
                 double bmi2 = handler.CheckBMI(newP2);
                 if (bmi2 < 18.5)
@@ -105,7 +105,7 @@
 
                 //-------------------------------------------Person 4-------------------------------------------------------------------------
                 Person newP3 = handler.CreatePerson(25, "Erika", "Arlandsson", 160, 200);
-                Console.WriteLine($"{newP3.Age}, {newP3.FName}, {newP3.LName}, {newP3.Height}, {newP3.Weight}");
+                Console.WriteLine($"År: {newP3.Age}, Förnamn: {newP3.FName}, Efternamn: {newP3.LName}, Längd: {newP3.Height}, Vikt: {newP3.Weight}");
 
                 double bmi3 = handler.CheckBMI(newP3);
                 if (bmi3 < 18.5)
