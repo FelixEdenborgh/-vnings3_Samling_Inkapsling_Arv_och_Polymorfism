@@ -257,7 +257,25 @@
             }
 
             //------------------------List of dogs----------------------------------------------------------------------
+            List<Dog> myDogList = new List<Dog>();
+            //myDogList.Add(myHorse);
+            // 9. F: Försök att lägga till en häst i listan av hundar. Varför fungerar inte det?
+            // Det fungerar inte då dog och horse inte är samma sak. Båda ärvet från Animal men har olika klasser i sig. Så de är inte lika eller äns samma.
+            // Och listan myDogList kan bara innehålla Dog eller någon klass som ärver av Dog. 
+            // List<Dog> Betyder att den bara accepterar object av typen Dog.
 
+            // 10. F: Vilken typ måste listan vara för att alla klasser skall kunna lagras tillsammans?
+            // För att kunna lagra alla klasserna så måste de ärva av samma klass och de gör det av Animal.
+            // Så därför måste Listan vara av typen Animal om den ska kunna lagra alla klasserna som ärver av Animal. List<Animal>
+
+            foreach ( var animal in anmialList)
+            {
+                Console.WriteLine($"Animal: {animal.GetType().Name}, Stats: {animal.Stats()}\n");
+            }
+            // 13. F: Förklara vad det är som händer.
+            // Koden loppar igenom alla objekten och vid varje animal så skriver den ut i detta fallet animal typen och animal stats då vi har både dem metoderna kallade på
+            // animal typen igenom metoden GetType "{animal.GetType().Name}" och Stats igenom metoden "{animal.Stats()}". Där Stats är en metod i Animal som overridas i varje subklass
+            // också varje subklass lägger till denns special properties i en return som sedan skrivs ut i våran Console.WriteLine när vi kallar på metoden.
         }
     }
 }
