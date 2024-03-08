@@ -128,6 +128,10 @@ namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
             Breed = changeBreed;
             return Breed;
         }
+        public string ImADog()
+        {
+            return "Im a Dog!";
+        }
 
         public override string DoSound()
         {

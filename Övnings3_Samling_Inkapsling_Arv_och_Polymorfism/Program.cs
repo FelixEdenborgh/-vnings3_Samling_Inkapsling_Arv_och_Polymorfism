@@ -1,4 +1,6 @@
-﻿namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
+﻿using System.Collections.Generic;
+
+namespace Övnings3_Samling_Inkapsling_Arv_och_Polymorfism
 {
     internal class Program
     {
@@ -308,6 +310,21 @@
 
             // Vi är på 3.4) Mer polymorfism: 15. Skapa en ny metod med valfritt namn i klassen Dog som endast returnerar en valfri
             // sträng.
+            //16.Kommer du åt den metoden från Animals listan ?
+            //17.F : Varför inte ?
+            // Jag kommer inte åt den då den ligger i en av mina underklasser av animal. Som i detta fallet är Dog.
+            // Jag skulle kunna göra en ny lista av typen dog och lägga in ett gäng dog objects och nå den den vägen.
+
+            // 18. Hitta ett sätt att skriva ut din nya metod för dog genom en foreach på Animals.
+            foreach ( var animal in anmialList)
+            {
+                if(animal is Dog)
+                {
+                    Dog dog = (Dog) animal; // Omvandlar till Dog för att kunna nå metoden
+                    string dogPhrase = dog.ImADog();
+                    Console.WriteLine($"Dog Phrase: {dogPhrase}");
+                }
+            }
         }
     }
 }
